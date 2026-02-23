@@ -17,9 +17,21 @@ export async function authenticate(
   try {
     const authenticateUserCase = makeAuthenticateUseCase()
 
-    await authenticateUserCase.execute({
+    const { user } = await authenticateUserCase.execute({
       email,
       password,
+    })
+    const token = await reply.jwtSign(
+      {},
+      {
+        sign: {
+          sub: user.id,
+        },
+      },
+    )
+
+    return reply.status(200).send({
+      token,
     })
   } catch (err) {
     if (err instanceof InvalidCredentialsError) {
@@ -28,5 +40,5 @@ export async function authenticate(
     }
     throw err
   }
-  return reply.status(200).send()
+  return reply.status(200).send({})
 }
