@@ -1,4 +1,13 @@
 {
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
-	"editor.defaultFoldingRangeProvider": "dbaeumer.vscode-eslint"
+	"editor.defaultFoldingRangeProvider": "dbaeumer.vscode-eslint",
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
 }

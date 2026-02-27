@@ -1,4 +1,4 @@
-import { expect, describe, it, beforeEach } from 'vitest'
+import { beforeEach, describe, expect, it } from 'vitest'
 import { InMemoryGymsRepository } from '@/repositories/in-memory/in-memory-gyms-repository'
 import { CreateGymUseCase } from './create-gym'
 

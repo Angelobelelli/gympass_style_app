@@ -1,6 +1,6 @@
-import { FastifyInstance } from 'fastify'
 import fastifySwagger from '@fastify/swagger'
 import fastifySwaggerUi from '@fastify/swagger-ui'
+import type { FastifyInstance } from 'fastify'
 
 export async function swaggerPlugin(app: FastifyInstance) {
   // Configuração base do Swagger
@@ -11,7 +11,7 @@ export async function swaggerPlugin(app: FastifyInstance) {
         description: 'Documentação da API usando Swagger',
         version: '1.0.0',
       },
-      host: 'localhost:3000',
+      host: 'localhost:3333',
       schemes: ['http'],
       consumes: ['application/json'],
       produces: ['application/json'],

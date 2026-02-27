@@ -1,8 +1,8 @@
-import { expect, describe, it, vi, beforeEach, afterEach } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { InMemoryCheckInsRepository } from '@/repositories/in-memory/in-memory-check-ins-repository'
-import { ValidateCheckInUserCase } from './validate-check-in'
-import { ResourceNotFoundError } from './errors/resource-not-found-error'
 import { LateChackInValidationError } from './errors/late-check-in-validation-error'
+import { ResourceNotFoundError } from './errors/resource-not-found-error'
+import { ValidateCheckInUserCase } from './validate-check-in'
 
 let checkInsRepository: InMemoryCheckInsRepository
 let sut: ValidateCheckInUserCase
@@ -18,6 +18,7 @@ describe('Validate Check-in Use Case', () => {
   afterEach(() => {
     vi.useRealTimers()
   })
+
   it('should be able to validate the check-in', async () => {
     const createdcheckIn = await checkInsRepository.create({
       gym_id: 'gym-01',

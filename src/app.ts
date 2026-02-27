@@ -1,9 +1,9 @@
+import fastifyJwt from '@fastify/jwt'
 import fastify from 'fastify'
-import { appRoutes } from './http/routes'
 import { ZodError } from 'zod'
 import { env } from './env'
+import { appRoutes } from './http/routes'
 import { swaggerPlugin } from './lib/swagger'
-import fastifyJwt from '@fastify/jwt'
 
 export const app = fastify()
 app.register(fastifyJwt, {
