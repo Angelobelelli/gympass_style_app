@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { CheckIn, Prisma } from '@prisma/client'
-import { CheckInsRepository } from '../check-ins-repository'
 import { randomUUID } from 'node:crypto'
+import type { CheckIn, Prisma } from '@prisma/client'
 import dayjs from 'dayjs'
+import type { CheckInsRepository } from '../check-ins-repository'
 
 export class InMemoryCheckInsRepository implements CheckInsRepository {
   public items: CheckIn[] = []

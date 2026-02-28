@@ -1,0 +1,2 @@
+overrides:
+  vitest-environment-prisma: link:../../../AppData/Local/pnpm/global/5/node_modules/vitest-environment-prisma
