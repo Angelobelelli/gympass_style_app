@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+.git
+prisma/dev.db
+npm-debug.log
+docker-compose.yml
+Dockerfile
+.dockerignore
