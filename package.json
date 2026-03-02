@@ -13,7 +13,8 @@
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "vitest-environment-prisma": "link:prisma\\vitest-environment-prisma"
   },
   "scripts": {
     "build": "tsup src",

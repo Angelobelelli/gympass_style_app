@@ -6,6 +6,10 @@ jobs:
   run-unit-tests:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: backend  # 👈 ajuste aqui
+
     steps:
       - uses: actions/checkout@v4
 

@@ -90,6 +90,9 @@ importers:
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@24.10.14)(@vitest/ui@3.2.4)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.8.2)
+      vitest-environment-prisma:
+        specifier: link:prisma\vitest-environment-prisma
+        version: link:prisma/vitest-environment-prisma
 
 packages:
 
