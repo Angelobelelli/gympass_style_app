@@ -19,15 +19,14 @@
     "build": "tsup src",
     "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts",
-
     "test": "vitest run --dir src/use-case",
     "test:watch": "vitest --dir src/use-case",
     "test:e2e": "vitest run --dir src/http",
-
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui"
   },
   "dependencies": {
+    "@fastify/cookie": "^11.0.2",
     "@fastify/jwt": "^10.0.0",
     "@fastify/swagger": "^9.5.1",
     "@fastify/swagger-ui": "^5.2.3",

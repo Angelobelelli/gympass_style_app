@@ -1,7 +1,7 @@
-import { randomUUID } from 'node:crypto'
 import type { Environment } from 'vitest/environments'
 import 'dotenv/config'
 import { execSync } from 'node:child_process'
+import { randomUUID } from 'node:crypto'
 import { prisma } from '@/lib/prisma'
 
 function generateDatabaseURL(schema: string) {
@@ -21,6 +21,7 @@ export default (<Environment>{
 
   async setup() {
     const schema = randomUUID()
+
     const databaseURL = generateDatabaseURL(schema)
 
     process.env.DATABASE_URL = databaseURL
