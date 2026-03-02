@@ -55,7 +55,7 @@ O projeto foi construído seguindo rigorosos padrões de engenharia de software:
 
 ## 🏁 Como Executar
 
-1. Instale as dependências: `npm install`
+1. Instale as dependências: `pnpm install`
 2. Configure o arquivo `.env` (use o `.env.example` como base)
 3. Suba o banco de dados com Docker: `docker-compose up -d`
 4. Execute as migrations: `npx prisma migrate dev`
