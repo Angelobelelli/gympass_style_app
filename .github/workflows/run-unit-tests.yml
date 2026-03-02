@@ -4,21 +4,20 @@ on: [ push ]
 
 jobs: 
   run-unit-tests:
-  name: Run Unit Tests
-  runs-on: ubuntu-latest
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
 
-  
-  steps: 
-      - uses: actions/checkout@v4
+    steps: 
+        - uses: actions/checkout@v4
+        
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 22
+            cache: 'pnpm'
       
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'pnpm'
-    
-      - run: pnpm ci
+        - run: pnpm ci
 
-      - run: pnpm run test
+        - run: pnpm run test
 
   
    
