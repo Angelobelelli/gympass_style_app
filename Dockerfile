@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 
 # Instala as dependências primeiro para aproveitar o cache do Docker
 COPY package*.json ./
+COPY prisma ./prisma/
 RUN npm install
 
 # Copia o restante do código e gera o build
