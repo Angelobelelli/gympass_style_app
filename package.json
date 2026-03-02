@@ -1,4 +1,21 @@
 {
+  "name": "deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "build": "tsup src",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "test": "vitest run --dir src/use-case",
+    "test:watch": "vitest --dir src/use-case",
+    "test:e2e": "vitest run --dir src/http",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
+  },
   "devDependencies": {
     "@biomejs/biome": "^2.4.4",
     "@types/bcryptjs": "^2.4.6",
@@ -15,16 +32,6 @@
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4",
     "vitest-environment-prisma": "link:prisma/vitest-environment-prisma"
-  },
-  "scripts": {
-    "build": "tsup src",
-    "start": "node dist/server.js",
-    "dev": "tsx watch src/server.ts",
-    "test": "vitest run --dir src/use-case",
-    "test:watch": "vitest --dir src/use-case",
-    "test:e2e": "vitest run --dir src/http",
-    "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
